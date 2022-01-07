@@ -8,13 +8,13 @@ app = FastAPI()
 ##############################################################
 
 # TODO
-@app.post('/test/predict')
-async def test_predict():
+@app.post('/production/predict')
+async def production_predict():
     raise HTTPException(status_code=501, detail="not implemented!")
 
 # TODO
-@app.post('/test/get_valid_files')
-async def test_predict():
+@app.post('/production/get_valid_files')
+async def production_get_valid_files():
     raise HTTPException(status_code=501, detail="not implemented!")
 
 ###############################################################
