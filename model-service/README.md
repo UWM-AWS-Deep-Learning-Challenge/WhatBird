@@ -12,12 +12,27 @@ The model service hosts our trained model and responds to requests from the `cli
     $ python3 -m venv <VENV_NAME>
     $ source ~/path/to/VENV_NAME/bin/activate
     ```
+
+    Windows (powershell):
+
+    ```ps
+    PS C:\dev\venv> python -m venv WhatBird-model-service
+    PS C:\dev\venv> .\WhatBird-model-service\Scripts\activate
+    (WhatBird-model-service) PS C:\dev\venv>PS C:\path\to\dir> 
+    ```
 3. Install dependencies: 
 
     Mac/Linux
     ```bash
     $ cd path/to/WhatBird/model-service
     $ pip3 install requirements.txt
+    ```
+
+    Windows (powershell):
+    ```ps
+    PS C:\> cd C:\path\to\WhatBird\model-service
+    PS C:\WhatBird\model-service> pip3 install -r requirements-windows.txt
+
     ```
 
 ## Running the service locally
