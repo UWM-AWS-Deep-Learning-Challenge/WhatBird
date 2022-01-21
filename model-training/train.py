@@ -95,7 +95,7 @@ vgg_model = tf.keras.Model(vgg_model.input, out_layer)
 opt = tf.keras.optimizers.Adam(learning_rate=0.0001)
 vgg_model.compile(optimizer=opt, loss="categorical_crossentropy", metrics=['accuracy'])
 
-checkpoint = ModelCheckpoint("model_1060_1.h5", monitor='val_accuracy', verbose=1, save_best_only=True, save_weights_only=False, mode='auto', period=1)
+checkpoint = ModelCheckpoint("model_1060_1_c1.h5", monitor='val_accuracy', verbose=1, save_best_only=True, save_weights_only=False, mode='auto', period=1)
 early = EarlyStopping(monitor='val_accuracy', min_delta=0, patience=20, verbose=1, mode='auto')
 callbacks = [checkpoint, early]
 
@@ -117,6 +117,7 @@ opt = tf.keras.optimizers.Adam(learning_rate=0.00005)
 vgg_model.trainable = True
 vgg_model.compile(optimizer=opt, loss="categorical_crossentropy", metrics=['accuracy'])
 
+checkpoint = ModelCheckpoint("model_1060_1_c2.h5", monitor='val_accuracy', verbose=1, save_best_only=True, save_weights_only=False, mode='auto', period=1)
 history = vgg_model.fit(
       train_generator, 
       epochs=1,
@@ -129,6 +130,7 @@ opt = tf.keras.optimizers.Adam(learning_rate=0.00001)
 vgg_model.compile(optimizer=opt, loss="categorical_crossentropy", metrics=['accuracy'])
 callbacks = [early, checkpoint]
 
+checkpoint = ModelCheckpoint("model_1060_1_c3.h5", monitor='val_accuracy', verbose=1, save_best_only=True, save_weights_only=False, mode='auto', period=1)
 history = vgg_model.fit(
       train_generator, 
       epochs=1,
