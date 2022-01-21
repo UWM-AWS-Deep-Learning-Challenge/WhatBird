@@ -5,7 +5,7 @@ import numpy as np
 import pandas as pd
 
 class Predictor():
-    WEIGHTS_1060_PATH = 'C:\dev\WhatBird\model-training\model_1060_1.h5'
+    WEIGHTS_1060_PATH = 'C:\dev\WhatBird\model-training\model_1060_1_c2.h5'
     CLASS_DICT = '../data/class_dict.csv'
 
     def __init__(self, modelPath: str = WEIGHTS_1060_PATH) -> None:
@@ -49,12 +49,12 @@ class Predictor():
                    "confidence": str(topThreeScores[0])
                 },
                "1" : {
-                   "species" : str(topThreeBirds[0]),
-                   "confidence": str(topThreeScores[0])
+                   "species" : str(topThreeBirds[1]),
+                   "confidence": str(topThreeScores[1])
                 },
                "2" : {
-                   "species" : str(topThreeBirds[0]),
-                   "confidence": str(topThreeScores[0])
+                   "species" : str(topThreeBirds[2]),
+                   "confidence": str(topThreeScores[2])
                 },
            }
         }
