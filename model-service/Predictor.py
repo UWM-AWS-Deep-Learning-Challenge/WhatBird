@@ -43,17 +43,17 @@ class Predictor():
 
         # map the results and return 
         prediction_map = {
-           "results" : {
-               "0" : {
-                   "species" : str(topThreeBirds[0]),
+           "results": {
+               "0": {
+                   "species": str(topThreeBirds[0]),
                    "confidence": str(topThreeScores[0])
                 },
-               "1" : {
-                   "species" : str(topThreeBirds[1]),
+               "1": {
+                   "species": str(topThreeBirds[1]),
                    "confidence": str(topThreeScores[1])
                 },
-               "2" : {
-                   "species" : str(topThreeBirds[2]),
+               "2": {
+                   "species": str(topThreeBirds[2]),
                    "confidence": str(topThreeScores[2])
                 },
            }
