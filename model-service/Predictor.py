@@ -5,7 +5,7 @@ import numpy as np
 import pandas as pd
 
 class Predictor():
-    WEIGHTS_1060_PATH = 'C:\dev\WhatBird\model-training\model_1060_1_c2.h5'
+    WEIGHTS_1060_PATH = '../data/valid/ALBATROSS/1.jpg'
     CLASS_DICT = '../data/class_dict.csv'
 
     def __init__(self, modelPath: str = WEIGHTS_1060_PATH) -> None:
